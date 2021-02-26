@@ -10,8 +10,6 @@ const LOGIN_PASS_SELECTOR = "passpass";
     slowMo: 250,
     devtools: true,
   });
-  await login();
-  await form();
   const page = (await browser.pages())[0];
   page.on("console", (msg) => console.log("PAGE LOG:", msg.text()));
   await page.evaluate(() => console.log(`url is ${location.href}`));
